@@ -53,7 +53,10 @@ Train and test accuracy curves of LeNet, VGGNet and ResNet on Fashion MNIST data
 
 Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct label is displayed in red font.
 
+LeNet predictions:
 <img src="logs/fashionmnist/lenet_images.png" alt="LeNet" />
+
+
 <img src="logs/fashionmnist/vggnet_images.png" alt="VGGNet" />
 <img src="logs/fashionmnist/resnet_images.png" alt="ResNet" />
 
