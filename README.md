@@ -41,12 +41,15 @@ The CNN architectures used are as follows:
 
 ### Fashion MNIST
 
-<p align="middle">
-  <img src="logs/fashionmnist/lenet_loss_hist.png" width="31%" />
-  <img src="logs/fashionmnist/vggnet_loss_hist.png" width="31%" /> 
-  <img src="logs/fashionmnist/resnet_loss_hist.png" width="31%" />
-</p>
+Train and test loss curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
+<img src="logs/fashionmnist/lenet_loss_hist.png" width="33%" alt="LeNet" />
+<img src="logs/fashionmnist/vggnet_loss_hist.png" width="33%" alt="VGGNet" />
+<img src="logs/fashionmnist/resnet_loss_hist.png" width="33%" alt="ResNet" />
 
+Train and test accuracy curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
+<img src="logs/fashionmnist/lenet_acc_hist.png" width="31%" alt="LeNet" />
+<img src="logs/fashionmnist/vggnet_acc_hist.png" width="31%" alt="VGGNet" />
+<img src="logs/fashionmnist/resnet_acc_hist.png" width="31%" alt="ResNet" />
 
 ## Getting Started
 
