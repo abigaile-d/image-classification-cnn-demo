@@ -47,10 +47,11 @@ Test accuracy of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
 - ResNet: **92.18%**
 
 Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
-
+<p float=left>
 <img src="logs/fashionmnist/lenet_acc_hist.png" width="32%" alt="LeNet" />
 <img src="logs/fashionmnist/vggnet_acc_hist.png" width="32%" alt="VGGNet" />
 <img src="logs/fashionmnist/resnet_acc_hist.png" width="32%" alt="ResNet" />
+</p>
 
 Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/fashionmnist/lenet_loss_hist.png" width="32%" alt="LeNet" />
