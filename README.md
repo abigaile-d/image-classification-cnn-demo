@@ -54,9 +54,11 @@ Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
 </p>
 
 Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
+<p float=left>
 <img src="logs/fashionmnist/lenet_loss_hist.png" width="32%" alt="LeNet" />
 <img src="logs/fashionmnist/vggnet_loss_hist.png" width="32%" alt="VGGNet" />
 <img src="logs/fashionmnist/resnet_loss_hist.png" width="32%" alt="ResNet" />
+</p>
 
 
 Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
