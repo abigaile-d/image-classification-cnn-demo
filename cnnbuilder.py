@@ -50,10 +50,10 @@ class CNNBuilder:
         elif self.dataset == 'eurosat':
             entireset = torchvision.datasets.EuroSAT(root=data_dir, download=True, transform=transform)
             trainset, testset = torch.utils.data.random_split(entireset, [24300, 2700])
-            self.classes = ['Annual Crop', 'Herbaceous Vegetation', 'Permanent Crop', 'Industrial', 'Pasture', 
-                            'Highway', 'Residential', 'River', 'Sea Lake', 'Forest']
-            self.classes_short = ['Ann. Crop', 'Herb. Vegetation', 'Perm. Crop', 'Industrial', 'Pasture', 
-                                  'Highway', 'Residential', 'River', 'Sea Lake', 'Forest']
+            self.classes = ['Annual Crop', 'Forest', 'Herbaceous Vegetation', 'Highway', 'Industrial', 
+                            'Pasture', 'Permanent Crop', 'Residential', 'River', 'Sea/Lake']
+            self.classes_short = ['Ann. Crop', 'Forest', 'H. Vegetation', 'Highway', 'Industrial', 
+                            'Pasture', 'Perm. Crop', 'Residential', 'River', 'Sea/Lake']
 
         # save as attribute
         self.testset = testset
