@@ -39,5 +39,9 @@ The CNN architectures used are as follows:
 
 ## Results
 
+### Fashion MNIST
+![alt-text-1](logs/fashionmnist/lenet_loss_hist.png "title-1") ![alt-text-2](logs/fashionmnist/vggnet_loss_hist.png "title-2") ![alt-text-3](logs/fashionmnist/resnet_loss_hist.png "title-3")
+
+
 ## Getting Started
 
