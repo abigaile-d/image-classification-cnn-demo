@@ -41,24 +41,76 @@ The CNN architectures used are as follows:
 
 ### Fashion MNIST
 
+Train and test accuracy curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
+
+LeNet: **88.63%**
+VGGNet: **92.68**
+ResNet: **92.18%**
+
+<img src="logs/fashionmnist/lenet_acc_hist.png" width="32%" alt="LeNet" />
+<img src="logs/fashionmnist/vggnet_acc_hist.png" width="32%" alt="VGGNet" />
+<img src="logs/fashionmnist/resnet_acc_hist.png" width="32%" alt="ResNet" />
+
 Train and test loss curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
 <img src="logs/fashionmnist/lenet_loss_hist.png" width="32%" alt="LeNet" />
 <img src="logs/fashionmnist/vggnet_loss_hist.png" width="32%" alt="VGGNet" />
 <img src="logs/fashionmnist/resnet_loss_hist.png" width="32%" alt="ResNet" />
 
-Train and test accuracy curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
-<img src="logs/fashionmnist/lenet_acc_hist.png" width="32%" alt="LeNet" />
-<img src="logs/fashionmnist/vggnet_acc_hist.png" width="32%" alt="VGGNet" />
-<img src="logs/fashionmnist/resnet_acc_hist.png" width="32%" alt="ResNet" />
 
 Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct label is displayed in red font.
 
 LeNet predictions:
 <img src="logs/fashionmnist/lenet_images.png" alt="LeNet" />
 
-
+VGGNet predictions:
 <img src="logs/fashionmnist/vggnet_images.png" alt="VGGNet" />
+
+ResNet predictions:
 <img src="logs/fashionmnist/resnet_images.png" alt="ResNet" />
+
+Classification report per classes:
+
+LeNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| T-shirt/top | 0.84 | 0.82 | 0.83 | 
+| Trouser | 0.98 | 0.97 | 0.98 | 
+| Pullover | 0.86 | 0.82 | 0.84 | 
+| Dress | 0.81 | 0.95 | 0.87 | 
+| Coat | 0.81 | 0.81 | 0.81 | 
+| Sandal | 0.97 | 0.96 | 0.96 | 
+| Shirt | 0.72 | 0.65 | 0.68 | 
+| Sneaker | 0.93 | 0.96 | 0.95 | 
+| Bag | 0.97 | 0.97 | 0.97 | 
+| Ankle boot | 0.97 | 0.95 | 0.96 | 
+
+VGGNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| T-shirt/top | 0.85 | 0.89 | 0.87 | 
+| Trouser | 0.99 | 0.99 | 0.99 | 
+| Pullover | 0.9 | 0.9 | 0.9 | 
+| Dress | 0.94 | 0.93 | 0.94 | 
+| Coat | 0.85 | 0.93 | 0.88 | 
+| Sandal | 0.99 | 0.99 | 0.99 | 
+| Shirt | 0.82 | 0.73 | 0.77 | 
+| Sneaker | 0.96 | 0.98 | 0.97 | 
+| Bag | 0.99 | 0.98 | 0.99 | 
+| Ankle boot | 0.98 | 0.95 | 0.97 | 
+
+ResNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| T-shirt/top | 0.88 | 0.86 | 0.87 | 
+| Trouser | 0.98 | 0.99 | 0.99 | 
+| Pullover | 0.92 | 0.83 | 0.87 | 
+| Dress | 0.93 | 0.93 | 0.93 | 
+| Coat | 0.84 | 0.91 | 0.87 | 
+| Sandal | 0.99 | 0.99 | 0.99 | 
+| Shirt | 0.77 | 0.79 | 0.78 | 
+| Sneaker | 0.96 | 0.98 | 0.97 | 
+| Bag | 0.99 | 0.99 | 0.99 | 
+| Ankle boot | 0.98 | 0.96 | 0.97 | 
 
 ## Getting Started
 
