@@ -60,7 +60,6 @@ Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/fashionmnist/resnet_loss_hist.png" width="32%" alt="ResNet" />
 </p>
 
-
 Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
 
 LeNet predictions:
@@ -138,7 +137,6 @@ Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/cifar10/resnet_loss_hist.png" width="32%" alt="ResNet" />
 </p>
 
-
 Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
 
 LeNet predictions:
@@ -193,6 +191,83 @@ ResNet:
 | Horse | 0.79 | 0.85 | 0.82 | 
 | Ship | 0.89 | 0.86 | 0.87 | 
 | Truck | 0.78 | 0.92 | 0.84 | 
+
+
+### EuroSAT
+
+Test accuracy of LeNet, VGGNet and ResNet on EuroSAT dataset:
+- LeNet: **85.81%**
+- VGGNet: **95.85%**
+- ResNet: **97.81%**
+
+Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
+<p float=left>
+<img src="logs/eurosat/lenet_acc_hist.png" width="32%" alt="LeNet" />
+<img src="logs/eurosat/vggnet_acc_hist.png" width="32%" alt="VGGNet" />
+<img src="logs/eurosat/resnet_acc_hist.png" width="32%" alt="ResNet" />
+</p>
+
+Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
+<p float=left>
+<img src="logs/eurosat/lenet_loss_hist.png" width="32%" alt="LeNet" />
+<img src="logs/eurosat/vggnet_loss_hist.png" width="32%" alt="VGGNet" />
+<img src="logs/eurosat/resnet_loss_hist.png" width="32%" alt="ResNet" />
+</p>
+
+Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
+
+LeNet predictions:
+<img src="logs/eurosat/lenet_images.png" alt="LeNet" />
+
+VGGNet predictions:
+<img src="logs/eurosat/vggnet_images.png" alt="VGGNet" />
+
+ResNet predictions:
+<img src="logs/eurosat/resnet_images.png" alt="ResNet" />
+
+Classification report per classes:
+
+LeNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| Annual Crop | 0.84 | 0.91 | 0.87 | 
+| Forest | 0.9 | 0.97 | 0.93 | 
+| Herbaceous Vegetation | 0.83 | 0.69 | 0.75 | 
+| Highway | 0.85 | 0.54 | 0.66 | 
+| Industrial | 0.91 | 1.0 | 0.95 | 
+| Pasture | 0.82 | 0.77 | 0.79 | 
+| Permanent Crop | 0.7 | 0.88 | 0.78 | 
+| Residential | 0.94 | 0.98 | 0.96 | 
+| River | 0.8 | 0.85 | 0.82 | 
+| Sea/Lake | 0.98 | 0.97 | 0.98 | 
+
+VGGNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| Annual Crop | 1.0 | 0.9 | 0.94 | 
+| Forest | 0.98 | 1.0 | 0.99 | 
+| Herbaceous Vegetation | 0.94 | 0.93 | 0.93 | 
+| Highway | 0.98 | 0.92 | 0.95 | 
+| Industrial | 1.0 | 0.95 | 0.97 | 
+| Pasture | 0.97 | 0.97 | 0.97 | 
+| Permanent Crop | 0.86 | 0.98 | 0.92 | 
+| Residential | 0.97 | 0.96 | 0.96 | 
+| River | 0.93 | 0.98 | 0.95 | 
+| Sea/Lake | 0.99 | 1.0 | 0.99 | 
+
+ResNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| Annual Crop | 1.0 | 0.98 | 0.99 | 
+| Forest | 1.0 | 0.93 | 0.96 | 
+| Herbaceous Vegetation | 0.9 | 0.99 | 0.95 | 
+| Highway | 0.99 | 0.99 | 0.99 | 
+| Industrial | 0.99 | 0.97 | 0.98 | 
+| Pasture | 0.98 | 0.97 | 0.97 | 
+| Permanent Crop | 0.99 | 0.98 | 0.98 | 
+| Residential | 1.0 | 0.97 | 0.99 | 
+| River | 0.98 | 1.0 | 0.99 | 
+| Sea/Lake | 0.98 | 1.0 | 0.99 | 
 
 ## Getting Started
 
