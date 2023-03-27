@@ -42,11 +42,10 @@ The CNN architectures used are as follows:
 ### Fashion MNIST
 
 <p align="middle">
-  <img src="logs/fashionmnist/lenet_loss_hist.png" width="33%" />
-  <img src="logs/fashionmnist/vggnet_loss_hist.png" width="33%" /> 
-  <img src="logs/fashionmnist/resnet_loss_hist.png" width="33%" />
+  <img src="logs/fashionmnist/lenet_loss_hist.png" width="31%" />
+  <img src="logs/fashionmnist/vggnet_loss_hist.png" width="31%" /> 
+  <img src="logs/fashionmnist/resnet_loss_hist.png" width="31%" />
 </p>
-![alt-text-1](logs/fashionmnist/lenet_loss_hist.png "title-1") ![alt-text-2](logs/fashionmnist/vggnet_loss_hist.png "title-2") ![alt-text-3](logs/fashionmnist/resnet_loss_hist.png "title-3")
 
 
 ## Getting Started
