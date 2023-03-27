@@ -43,7 +43,7 @@ The CNN architectures used are as follows:
 
 Test accuracy of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
 - LeNet: **88.63%**
-- VGGNet: **92.68**
+- VGGNet: **92.68%**
 - ResNet: **92.18%**
 
 Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
@@ -115,6 +115,84 @@ ResNet:
 | Sneaker | 0.96 | 0.98 | 0.97 | 
 | Bag | 0.99 | 0.99 | 0.99 | 
 | Ankle boot | 0.98 | 0.96 | 0.97 | 
+
+
+### CIFAR-10
+
+Test accuracy of LeNet, VGGNet and ResNet on CIFAR-10 dataset:
+- LeNet: **64.51%**
+- VGGNet: **81.35%**
+- ResNet: **78.45%**
+
+Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
+<p float=left>
+<img src="logs/cifar10/lenet_acc_hist.png" width="32%" alt="LeNet" />
+<img src="logs/cifar10/vggnet_acc_hist.png" width="32%" alt="VGGNet" />
+<img src="logs/cifar10/resnet_acc_hist.png" width="32%" alt="ResNet" />
+</p>
+
+Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
+<p float=left>
+<img src="logs/cifar10/lenet_loss_hist.png" width="32%" alt="LeNet" />
+<img src="logs/cifar10/vggnet_loss_hist.png" width="32%" alt="VGGNet" />
+<img src="logs/cifar10/resnet_loss_hist.png" width="32%" alt="ResNet" />
+</p>
+
+
+Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
+
+LeNet predictions:
+<img src="logs/cifar10/lenet_images.png" alt="LeNet" />
+
+VGGNet predictions:
+<img src="logs/cifar10/vggnet_images.png" alt="VGGNet" />
+
+ResNet predictions:
+<img src="logs/cifar10/resnet_images.png" alt="ResNet" />
+
+Classification report per classes:
+
+LeNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| Plane | 0.74 | 0.62 | 0.67 | 
+| Car | 0.74 | 0.79 | 0.77 | 
+| Bird | 0.55 | 0.56 | 0.55 | 
+| Cat | 0.49 | 0.41 | 0.44 | 
+| Deer | 0.57 | 0.64 | 0.6 | 
+| Dog | 0.53 | 0.57 | 0.55 | 
+| Frog | 0.68 | 0.77 | 0.72 | 
+| Horse | 0.76 | 0.62 | 0.68 | 
+| Ship | 0.68 | 0.82 | 0.74 | 
+| Truck | 0.74 | 0.65 | 0.69 | 
+
+VGGNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| Plane | 0.77 | 0.88 | 0.82 | 
+| Car | 0.94 | 0.89 | 0.92 | 
+| Bird | 0.78 | 0.69 | 0.74 | 
+| Cat | 0.63 | 0.71 | 0.67 | 
+| Deer | 0.76 | 0.83 | 0.79 | 
+| Dog | 0.75 | 0.72 | 0.73 | 
+| Frog | 0.87 | 0.84 | 0.86 | 
+| Horse | 0.86 | 0.82 | 0.84 | 
+| Ship | 0.94 | 0.84 | 0.88 | 
+| Truck | 0.89 | 0.9 | 0.9 | 
+
+ResNet:
+| Label | Precision | Recall | F1-score |
+| ----- | --------- | ------ | -------- |
+| Plane | 0.77 | 0.82 | 0.79 | 
+| Car | 0.94 | 0.83 | 0.88 | 
+| Bird | 0.67 | 0.77 | 0.71 | 
+| Cat | 0.69 | 0.53 | 0.6 | 
+| Deer | 0.82 | 0.71 | 0.76 | 
+| Dog | 0.72 | 0.7 | 0.71 | 
+| Frog | 0.79 | 0.88 | 0.83 | 
+| Horse | 0.79 | 0.85 | 0.82 | 
+| Ship | 0.89 | 0.86 | 0.87 | 
+| Truck | 0.78 | 0.92 | 0.84 | 
 
 ## Getting Started
 
