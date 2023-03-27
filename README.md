@@ -41,23 +41,23 @@ The CNN architectures used are as follows:
 
 ### Fashion MNIST
 
-Train and test accuracy curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
-
+Test accuracy of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
 - LeNet: **88.63%**
 - VGGNet: **92.68**
 - ResNet: **92.18%**
 
+Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/fashionmnist/lenet_acc_hist.png" width="32%" alt="LeNet" />
 <img src="logs/fashionmnist/vggnet_acc_hist.png" width="32%" alt="VGGNet" />
 <img src="logs/fashionmnist/resnet_acc_hist.png" width="32%" alt="ResNet" />
 
-Train and test loss curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
+Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/fashionmnist/lenet_loss_hist.png" width="32%" alt="LeNet" />
 <img src="logs/fashionmnist/vggnet_loss_hist.png" width="32%" alt="VGGNet" />
 <img src="logs/fashionmnist/resnet_loss_hist.png" width="32%" alt="ResNet" />
 
 
-Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct label is displayed in red font.
+Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
 
 LeNet predictions:
 <img src="logs/fashionmnist/lenet_images.png" alt="LeNet" />
