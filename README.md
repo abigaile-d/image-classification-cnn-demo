@@ -43,9 +43,9 @@ The CNN architectures used are as follows:
 
 Train and test accuracy curves of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
 
-LeNet: **88.63%**
-VGGNet: **92.68**
-ResNet: **92.18%**
+- LeNet: **88.63%**
+- VGGNet: **92.68**
+- ResNet: **92.18%**
 
 <img src="logs/fashionmnist/lenet_acc_hist.png" width="32%" alt="LeNet" />
 <img src="logs/fashionmnist/vggnet_acc_hist.png" width="32%" alt="VGGNet" />
