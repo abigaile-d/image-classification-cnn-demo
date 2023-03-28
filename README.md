@@ -1,6 +1,6 @@
 # Image Classification using LeNet, VGGNet and ResNet on Fashion MNIST, CIFAR-10 and EuroSAT datasets
 
-This project aims to show how to train LeNet, VGGNet and ResNet Convolutional Network models to classify images from Fashion MNIST, CIFAR-10 and EuroSAT datasets from scratch using PyTorch. Each model were trained on each dataset so there are 9 models in total. No pre-trained models were used.
+This project aims to show how to create and train LeNet, VGGNet and ResNet Convolutional Network models for image classification from scratch using PyTorch. It shows the results of training on Fashion MNIST, CIFAR-10 and EuroSAT datasets. Each model was trained on each dataset so there are 9 models in total. No pre-trained models were used.
 
 ## Description
 
@@ -39,11 +39,13 @@ The CNN architectures used are as follows:
 
 ## Results
 
+The outcomes presented were produced by training on the default model (i.e. as described in the CNN architecture above), and no regularization techniques were employed yet. However, I intend to proceed with further experiments that incorporate regularization.
+
 ### Fashion MNIST
 
 Test accuracy of LeNet, VGGNet and ResNet on Fashion MNIST dataset:
 - LeNet: **88.63%**
-- VGGNet: **92.68%**
+- VGGNet: **92.68%** - best
 - ResNet: **92.18%**
 
 Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
@@ -71,56 +73,60 @@ VGGNet predictions:
 ResNet predictions:
 <img src="logs/fashionmnist/resnet_images.png" alt="ResNet" />
 
+<mark> Observations: Most of the incorrect predictions by the models are confusing even for humans. 
+For instance, some shirts were predicted as t-shirt/tops, but it is hard to differentiate just by looking. Same with some coats as dresses, etc.</mark>
+
 Classification report per classes:
 
 LeNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | T-shirt/top | 0.84 | 0.82 | 0.83 | 
-| Trouser | 0.98 | 0.97 | 0.98 | 
+| Trouser | 0.98 | 0.97 | 0.98 | best |
 | Pullover | 0.86 | 0.82 | 0.84 | 
 | Dress | 0.81 | 0.95 | 0.87 | 
 | Coat | 0.81 | 0.81 | 0.81 | 
 | Sandal | 0.97 | 0.96 | 0.96 | 
-| Shirt | 0.72 | 0.65 | 0.68 | 
+| Shirt | 0.72 | 0.65 | 0.68 | worst |
 | Sneaker | 0.93 | 0.96 | 0.95 | 
 | Bag | 0.97 | 0.97 | 0.97 | 
 | Ankle boot | 0.97 | 0.95 | 0.96 | 
 
 VGGNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | T-shirt/top | 0.85 | 0.89 | 0.87 | 
-| Trouser | 0.99 | 0.99 | 0.99 | 
+| Trouser | 0.99 | 0.99 | 0.99 | best |
 | Pullover | 0.9 | 0.9 | 0.9 | 
 | Dress | 0.94 | 0.93 | 0.94 | 
 | Coat | 0.85 | 0.93 | 0.88 | 
-| Sandal | 0.99 | 0.99 | 0.99 | 
-| Shirt | 0.82 | 0.73 | 0.77 | 
+| Sandal | 0.99 | 0.99 | 0.99 | best |
+| Shirt | 0.82 | 0.73 | 0.77 | worst |
 | Sneaker | 0.96 | 0.98 | 0.97 | 
 | Bag | 0.99 | 0.98 | 0.99 | 
 | Ankle boot | 0.98 | 0.95 | 0.97 | 
 
 ResNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | T-shirt/top | 0.88 | 0.86 | 0.87 | 
 | Trouser | 0.98 | 0.99 | 0.99 | 
 | Pullover | 0.92 | 0.83 | 0.87 | 
 | Dress | 0.93 | 0.93 | 0.93 | 
 | Coat | 0.84 | 0.91 | 0.87 | 
-| Sandal | 0.99 | 0.99 | 0.99 | 
-| Shirt | 0.77 | 0.79 | 0.78 | 
+| Sandal | 0.99 | 0.99 | 0.99 | best |
+| Shirt | 0.77 | 0.79 | 0.78 | worst |
 | Sneaker | 0.96 | 0.98 | 0.97 | 
-| Bag | 0.99 | 0.99 | 0.99 | 
+| Bag | 0.99 | 0.99 | 0.99 | best |
 | Ankle boot | 0.98 | 0.96 | 0.97 | 
 
+<mark> The models have performed best on trousers, sandals and bags since they look the most unique compared to other classes. On the other hand, it performed worst on shirt because it is hard to differentiate shirts on this dataset with other classes, even for humans. </mark>
 
 ### CIFAR-10
 
 Test accuracy of LeNet, VGGNet and ResNet on CIFAR-10 dataset:
 - LeNet: **64.51%**
-- VGGNet: **81.35%**
+- VGGNet: **81.35%** - best
 - ResNet: **78.45%**
 
 Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
@@ -271,3 +277,25 @@ ResNet:
 
 ## Getting Started
 
+Clone the repository and setup environment:
+
+```
+pip install -r requirements.txt
+```
+
+Open the notebook ```train_cnn.ipynb``` and edit the following variables that can be found in the 2nd cell as described in the notebook:
+
+```
+skip_training
+run_settings
+```
+
+Run all the cells. 
+
+&nbsp;
+
+**Reminders:**
+
+If you have run the training, make sure to backup or rename models you want to keep before re-training.
+
+You can also set your own naming convention of the model and log files by changing the value of ```save_path``` in ```run_archi_on_dataset()``` (5th cell).
