@@ -2,6 +2,20 @@
 
 This project aims to show how to create and train LeNet, VGGNet and ResNet Convolutional Network models for image classification from scratch using PyTorch. It shows the results of training on Fashion MNIST, CIFAR-10 and EuroSAT datasets. Each model was trained on each dataset so there are 9 models in total. No pre-trained models were used.
 
+**Table of Contents**
+- [Description](#description)
+    * [Datasets](#datasets)
+        + [Fashion MNIST](#fashion-mnist-dataset)
+        + [CIFAR-10](#cifar-10-dataset)
+        + [EuroSAT](#eurosat-dataset)
+    * [CNN Architecture](#cnn-architecture)
+    * [Technologies](#technologies)
+- [Results](#results)
+    * [Fashion MNIST](#fashion-mnist)
+    * [CIFAR-10](#cifar-10)
+    * [EuroSAT](#eurosat)
+- [How To Use](#how-to-use)
+
 ## Description
 
 ### Datasets
@@ -279,7 +293,7 @@ ResNet:
 
 **Observations:** VGGNet and ResNet have performed well on this dataset. In terms of class-wise performance, all models achieved high accuracy for the sea/lake class, as sea and lakes can have similar appearances across different locations.
 
-## Getting Started
+## How to Use
 
 Clone the repository and setup environment:
 
