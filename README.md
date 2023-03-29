@@ -27,13 +27,15 @@ The classes are as follows: (1) Annual Crop, (2) Forest, (3) Herbaceous Vegetati
 ### CNN Architecture
 
 The CNN architectures used are as follows:
-- **LeNet**: Based on the default LeNet5 architecture.
-- **VGGNet**: A smaller version of VGGNet with 3 blocks of 3 convolutional layers each. Each convolutional layer has batch normalization and ReLU non-linearity. Each convolutional block is followed by a max pooling layer (in the 1st 2 blocks) and a global average pooling layer (in the 3rd block). Finally, there is a fully-connected layer for the label classification.
-- **ResNet**: A smaller version of ResNet with four blocks of convolutional layers. The convolutional blocks have batch normalization, ReLU non-linearity and skip connections. After the convolutional blocks, there is a global average pooling layer followed by a fully-connected layer for the label classification.
+- **LeNet**: Based on the default LeNet5 architecture. See ```lenet.py```.
+- **VGGNet**: A smaller version of VGGNet with 3 blocks of 3 convolutional layers each. Each convolutional layer has batch normalization and ReLU non-linearity. Each convolutional block is followed by a max pooling layer (in the 1st 2 blocks) and a global average pooling layer (in the 3rd block). Finally, there is a fully-connected layer for the label classification. See ```vggnet.py```.
+- **ResNet**: A smaller version of ResNet with four blocks of convolutional layers. The convolutional blocks have batch normalization, ReLU non-linearity and skip connections. After the convolutional blocks, there is a global average pooling layer followed by a fully-connected layer for the label classification. See ```resnet.py```.
+
 
 ### Technologies
 
 - Python
+- Jupyter notebooks
 - PyTorch
 - Matplotlib
 
@@ -62,7 +64,7 @@ Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/fashionmnist/resnet_loss_hist.png" width="32%" alt="ResNet" />
 </p>
 
-Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
+Below are random images grouped by their predicted class. Incorrectly predicted images are outlined in red, and the correct labels are displayed in red font.
 
 LeNet predictions:
 <img src="logs/fashionmnist/lenet_images.png" alt="LeNet" />
@@ -73,8 +75,7 @@ VGGNet predictions:
 ResNet predictions:
 <img src="logs/fashionmnist/resnet_images.png" alt="ResNet" />
 
-<mark> Observations: Most of the incorrect predictions by the models are confusing even for humans. 
-For instance, some shirts were predicted as t-shirt/tops, but it is hard to differentiate just by looking. Same with some coats as dresses, etc.</mark>
+**Observations:** Many of the incorrect predictions made by the models are difficult for humans to distinguish as well. For example, some shirts were predicted as t-shirts or tops, but it is also challenging to differentiate between them just by looking. Similarly, some coats were misclassified as dresses, etc.
 
 Classification report per classes:
 
@@ -120,7 +121,7 @@ ResNet:
 | Bag | 0.99 | 0.99 | 0.99 | best |
 | Ankle boot | 0.98 | 0.96 | 0.97 | 
 
-<mark> The models have performed best on trousers, sandals and bags since they look the most unique compared to other classes. On the other hand, it performed worst on shirt because it is hard to differentiate shirts on this dataset with other classes, even for humans. </mark>
+**Observations:** The models have performed best on trousers, sandals, and bags, as they appear the most distinct compared to other classes. On the other hand, the models performed worst on shirts, as it can be difficult to distinguish between shirts and other classes in this dataset, even for humans. Both VGGNet and ResNet performed well on this dataset.
 
 ### CIFAR-10
 
@@ -143,7 +144,7 @@ Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/cifar10/resnet_loss_hist.png" width="32%" alt="ResNet" />
 </p>
 
-Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
+Below are random images grouped by their predicted class. Incorrectly predicted images are outlined in red, and the correct labels are displayed in red font.
 
 LeNet predictions:
 <img src="logs/cifar10/lenet_images.png" alt="LeNet" />
@@ -157,12 +158,12 @@ ResNet predictions:
 Classification report per classes:
 
 LeNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | Plane | 0.74 | 0.62 | 0.67 | 
-| Car | 0.74 | 0.79 | 0.77 | 
+| Car | 0.74 | 0.79 | 0.77 | best |
 | Bird | 0.55 | 0.56 | 0.55 | 
-| Cat | 0.49 | 0.41 | 0.44 | 
+| Cat | 0.49 | 0.41 | 0.44 | worst |
 | Deer | 0.57 | 0.64 | 0.6 | 
 | Dog | 0.53 | 0.57 | 0.55 | 
 | Frog | 0.68 | 0.77 | 0.72 | 
@@ -171,12 +172,12 @@ LeNet:
 | Truck | 0.74 | 0.65 | 0.69 | 
 
 VGGNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | Plane | 0.77 | 0.88 | 0.82 | 
-| Car | 0.94 | 0.89 | 0.92 | 
+| Car | 0.94 | 0.89 | 0.92 | best |
 | Bird | 0.78 | 0.69 | 0.74 | 
-| Cat | 0.63 | 0.71 | 0.67 | 
+| Cat | 0.63 | 0.71 | 0.67 | worst |
 | Deer | 0.76 | 0.83 | 0.79 | 
 | Dog | 0.75 | 0.72 | 0.73 | 
 | Frog | 0.87 | 0.84 | 0.86 | 
@@ -185,12 +186,12 @@ VGGNet:
 | Truck | 0.89 | 0.9 | 0.9 | 
 
 ResNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | Plane | 0.77 | 0.82 | 0.79 | 
-| Car | 0.94 | 0.83 | 0.88 | 
+| Car | 0.94 | 0.83 | 0.88 | best |
 | Bird | 0.67 | 0.77 | 0.71 | 
-| Cat | 0.69 | 0.53 | 0.6 | 
+| Cat | 0.69 | 0.53 | 0.6 | worst |
 | Deer | 0.82 | 0.71 | 0.76 | 
 | Dog | 0.72 | 0.7 | 0.71 | 
 | Frog | 0.79 | 0.88 | 0.83 | 
@@ -198,13 +199,14 @@ ResNet:
 | Ship | 0.89 | 0.86 | 0.87 | 
 | Truck | 0.78 | 0.92 | 0.84 | 
 
+**Observations:** All three models performed best on car images and worst on cat images. Additionally, the models struggled overall in correctly classifying objects from this dataset.
 
 ### EuroSAT
 
 Test accuracy of LeNet, VGGNet and ResNet on EuroSAT dataset:
 - LeNet: **85.81%**
 - VGGNet: **95.85%**
-- ResNet: **97.81%**
+- ResNet: **97.81%** - best
 
 Train and test accuracy curves of LeNet, VGGNet and ResNet, respectively:
 <p float=left>
@@ -220,7 +222,7 @@ Train and test loss curves of LeNet, VGGNet and ResNet, respectively:
 <img src="logs/eurosat/resnet_loss_hist.png" width="32%" alt="ResNet" />
 </p>
 
-Random images grouped by the predicted class. Incorrectly predicted images have red borders and the correct labels are displayed in red font.
+Below are random images grouped by their predicted class. Incorrectly predicted images are outlined in red, and the correct labels are displayed in red font.
 
 LeNet predictions:
 <img src="logs/eurosat/lenet_images.png" alt="LeNet" />
@@ -234,46 +236,48 @@ ResNet predictions:
 Classification report per classes:
 
 LeNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | Annual Crop | 0.84 | 0.91 | 0.87 | 
 | Forest | 0.9 | 0.97 | 0.93 | 
 | Herbaceous Vegetation | 0.83 | 0.69 | 0.75 | 
-| Highway | 0.85 | 0.54 | 0.66 | 
+| Highway | 0.85 | 0.54 | 0.66 | worst |
 | Industrial | 0.91 | 1.0 | 0.95 | 
 | Pasture | 0.82 | 0.77 | 0.79 | 
 | Permanent Crop | 0.7 | 0.88 | 0.78 | 
 | Residential | 0.94 | 0.98 | 0.96 | 
 | River | 0.8 | 0.85 | 0.82 | 
-| Sea/Lake | 0.98 | 0.97 | 0.98 | 
+| Sea/Lake | 0.98 | 0.97 | 0.98 | best |
 
 VGGNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
 | Annual Crop | 1.0 | 0.9 | 0.94 | 
 | Forest | 0.98 | 1.0 | 0.99 | 
 | Herbaceous Vegetation | 0.94 | 0.93 | 0.93 | 
 | Highway | 0.98 | 0.92 | 0.95 | 
 | Industrial | 1.0 | 0.95 | 0.97 | 
 | Pasture | 0.97 | 0.97 | 0.97 | 
-| Permanent Crop | 0.86 | 0.98 | 0.92 | 
+| Permanent Crop | 0.86 | 0.98 | 0.92 | worst |
 | Residential | 0.97 | 0.96 | 0.96 | 
 | River | 0.93 | 0.98 | 0.95 | 
-| Sea/Lake | 0.99 | 1.0 | 0.99 | 
+| Sea/Lake | 0.99 | 1.0 | 0.99 | best |
 
 ResNet:
-| Label | Precision | Recall | F1-score |
-| ----- | --------- | ------ | -------- |
-| Annual Crop | 1.0 | 0.98 | 0.99 | 
+| Label | Precision | Recall | F1-score | |
+| ----- | --------- | ------ | -------- |-|
+| Annual Crop | 1.0 | 0.98 | 0.99 | best |
 | Forest | 1.0 | 0.93 | 0.96 | 
-| Herbaceous Vegetation | 0.9 | 0.99 | 0.95 | 
-| Highway | 0.99 | 0.99 | 0.99 | 
+| Herbaceous Vegetation | 0.9 | 0.99 | 0.95 | worst |
+| Highway | 0.99 | 0.99 | 0.99 | best |
 | Industrial | 0.99 | 0.97 | 0.98 | 
 | Pasture | 0.98 | 0.97 | 0.97 | 
 | Permanent Crop | 0.99 | 0.98 | 0.98 | 
 | Residential | 1.0 | 0.97 | 0.99 | 
-| River | 0.98 | 1.0 | 0.99 | 
-| Sea/Lake | 0.98 | 1.0 | 0.99 | 
+| River | 0.98 | 1.0 | 0.99 | best |
+| Sea/Lake | 0.98 | 1.0 | 0.99 | best |
+
+**Observations:** VGGNet and ResNet have performed well on this dataset. In terms of class-wise performance, all models achieved high accuracy for the sea/lake class, as sea and lakes can have similar appearances across different locations.
 
 ## Getting Started
 
@@ -283,7 +287,7 @@ Clone the repository and setup environment:
 pip install -r requirements.txt
 ```
 
-Open the notebook ```train_cnn.ipynb``` and edit the following variables that can be found in the 2nd cell as described in the notebook:
+Open the notebook ```train_cnn.ipynb``` and modify the following variables, located in the 2nd cell, as described in the notebook:
 
 ```
 skip_training
@@ -296,6 +300,6 @@ Run all the cells.
 
 **Reminders:**
 
-If you have run the training, make sure to backup or rename models you want to keep before re-training.
+If you have already run the training, ensure that you backup or rename the models you want to keep before re-training.
 
-You can also set your own naming convention of the model and log files by changing the value of ```save_path``` in ```run_archi_on_dataset()``` (5th cell).
+Additionally, you can set your own naming convention for the model and log files by modifying the value of ```save_path``` in the ```run_archi_on_dataset()``` function, located in the fifth cell.
