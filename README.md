@@ -1,6 +1,3 @@
----
-format: gfm
----
 # Image Classification using LeNet, VGGNet and ResNet on Fashion MNIST, CIFAR-10 and EuroSAT datasets
 
 This project aims to show how to create and train LeNet, VGGNet and ResNet Convolutional Network models for image classification from scratch using PyTorch. It shows the results of training on Fashion MNIST, CIFAR-10 and EuroSAT datasets. Each model was trained on each dataset so there are 9 models in total. No pre-trained models were used.
