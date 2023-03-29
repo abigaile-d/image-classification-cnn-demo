@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 class LeNet(nn.Module):
     """
-    Convolutional neural network based on LeNet architecture.
+    Convolutional neural network based on default LeNet5 architecture.
     """
     def __init__(self, in_channels, out_classes):
         """
@@ -19,7 +19,7 @@ class LeNet(nn.Module):
         self.conv2 = nn.Conv2d(6, 16, kernel_size=5)
         self.maxpool2 = nn.MaxPool2d(kernel_size=2, stride=2)
 
-        self.fc1 = nn.Linear(4 * 4 * 16, 120)
+        self.fc1 = nn.LazyLinear(120)
         self.fc2 = nn.Linear(120, 84)
         self.fc3 = nn.Linear(84, out_classes)
     

@@ -65,7 +65,7 @@ class VGGNet(nn.Module):
             ConvLayer(2 * out_channels, out_channels, 1),
         )
         
-        self.avgpool = nn.AvgPool2d(kernel_size=5, stride=1)
+        self.avgpool = nn.AdaptiveAvgPool2d(1)
         self.fc = nn.Linear(out_channels, out_classes)
 
 

@@ -109,7 +109,7 @@ class ResNet(nn.Module):
         self.group2 = BlockGroup(out_channels, 2 * out_channels, n_blocks[1], stride=2)
         self.group3 = BlockGroup(2 * out_channels, 4 * out_channels, n_blocks[2], stride=2)
 
-        self.avgpool = nn.AvgPool2d(kernel_size=4, stride=1)
+        self.avgpool = nn.AdaptiveAvgPool2d(1)
         self.fc = nn.Linear(4 * out_channels, out_classes)
 
         # initialize weightss
